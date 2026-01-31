@@ -1,0 +1,170 @@
+.card {
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 2rem;
+    background: #ffffff;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.header h2 {
+    margin: 0;
+    color: #111827;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.refreshBtn {
+    background: white;
+    border: 1px solid #d1d5db;
+    color: #374151;
+    cursor: pointer;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.refreshBtn:hover {
+    background: #f9fafb;
+    border-color: #9ca3af;
+}
+
+.spin {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.tableContainer {
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.table th {
+    text-align: left;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #e5e7eb;
+    font-weight: 600;
+    color: #6b7280;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.table td {
+    padding: 1rem;
+    border-bottom: 1px solid #f3f4f6;
+    color: #1f2937;
+    font-size: 0.875rem;
+}
+
+.table tr:last-child td {
+    border-bottom: none;
+}
+
+.customerName {
+    font-weight: 500;
+    color: #111827;
+}
+
+.phone {
+    font-family: monospace;
+    color: #4b5563;
+}
+
+.workflowBadge {
+    background: #f3f4f6;
+    color: #374151;
+    padding: 0.25rem 0.625rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.status {
+    text-transform: capitalize;
+    font-weight: 500;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+.status::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin-right: 6px;
+    background: currentColor;
+}
+
+.statusPending {
+    background: #fffbeb;
+    color: #b45309;
+}
+
+.statusInitiated {
+    background: #eff6ff;
+    color: #1d4ed8;
+}
+
+.statusCompleted {
+    background: #ecfdf5;
+    color: #047857;
+}
+
+.statusFailed {
+    background: #fef2f2;
+    color: #ef4444;
+}
+
+.time {
+    color: #9ca3af;
+    font-size: 0.8rem;
+}
+
+.emptyState {
+    text-align: center;
+    padding: 3rem;
+    color: #9ca3af;
+}
+
+.errorState {
+    color: red;
+    text-align: center;
+    padding: 2rem;
+}
+
+.loadingState {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+}

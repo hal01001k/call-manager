@@ -11,8 +11,8 @@ from backend.models import CallRequest, CallStatusEnum
 from backend.auth import verify_token
 
 
-PROVIDER_URL = os.getenv("PROVIDER_URL", "http://localhost:8000/provider/send")
-WEBHOOK_URL = os.getenv("WEBHOOK_URL", "http://localhost:8000/api/webhook/")
+PROVIDER_URL = os.getenv("PROVIDER_URL", "http://127.0.0.1:8000/provider/send")
+WEBHOOK_URL = os.getenv("WEBHOOK_URL", "http://127.0.0.1:8000/api/webhook/")
 
 
 router = APIRouter(prefix="/api/calls", tags=["calls"], dependencies=[Depends(verify_token)])
